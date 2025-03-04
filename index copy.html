@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- CDN -->
+        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+        <!-- Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Arizonia&family=Mea+Culpa&family=Ms+Madi&family=Niconne&display=swap" rel="stylesheet" />
+
+        <style>
+            ._font-mea-culpa {
+                font-family: "Mea Culpa", cursive;
+            }
+            ._font-ms-madi {
+                font-family: "Ms Madi", cursive;
+            }
+            ._font-arizonia {
+                font-family: "Arizonia", cursive;
+            }
+            ._font-niconne {
+                font-family: "Niconne", cursive;
+            }
+
+            ._glow-text-pink {
+                text-shadow: 0 0 10px red;
+            }
+            /* Swipe */
+            .swipe-up {
+                position: relative;
+                display: inline-block;
+                font-size: 24px;
+                font-weight: bold;
+                color: white;
+                animation: swipeUp 3s infinite ease-in-out;
+            }
+
+            @keyframes swipeUp {
+                0% {
+                    transform: translateY(10px);
+                    opacity: 0;
+                }
+                50% {
+                    transform: translateY(0px);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-10px);
+                    opacity: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="relative max-h-screen">
+            <div id="welcome-overlay" class="absolute inset-0 w-full h-screen overflow-hidden z-90">
+                <img src="/img/tp_lft_img1.jpg" alt="" class="object-contain w-full" />
+                <img src="/img/tp_lft_img2.jpg" alt="" class="object-contain w-full" />
+                <img src="/img/tp_lft_img1.jpg" alt="" class="object-contain w-full" />
+                <div class="absolute bottom-0 w-full h-2/3 bg-linear-to-b from-transparent to-red-500 flex flex-col items-center justify-center px-8">
+                    <div class="_font-mea-culpa text-white text-5xl text-center _glow-text-pink">Happy Birthday</div>
+                    <div class="relative">
+                        <div id="handwriting-text" class="_font-ms-madi text-white text-9xl text-center _glow-text-pink mt-3">Ajeng</div>
+                        <img src="/img/red-love.png" alt="" class="h-6 w-6 absolute top-16 -right-6 rotate-45" />
+                    </div>
+
+                    <div class="absolute bottom-24 text-center">
+                        <div class="swipe-up">▲</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative bg-gradient-to-b from-white to-pink-200 h-screen text-center flex items-center justify-center">
+                <img id="img-ribbon" src="/img/pink-ribbon.png" alt="" class="absolute top-2 left-4 w-26 aspect-square object-contain -rotate-45" />
+                <div class="absolute inset-0 w-full h-full">
+                    <img src="/img/backdrop.png" alt="" class="opacity-[0.15] w-full h-full object-cover" />
+                </div>
+                <div class="absolute top-8 right-8">
+                    <span class="_font-ms-madi text-pink-500 text-5xl font-semibold">Dear Ade..</span>
+                </div>
+                <div id="birthday-message" class="absolute top-28 w-full px-4">
+                    <div class="text-2xl text-start text-pink-500 _font-niconne">Selamat ulang tahun yang ke-<span class="text-6xl">25</span> 🎉✨</div>
+                    <br />
+                    <div class="text-2xl text-start text-pink-500 _font-niconne">
+                        Udah seperempat abad nih, gimana rasanya? Masih sama atau ada yang berubah? Hehe. Kaka cuma mau bilang, terima kasih karena selalu ada, selalu jadi tempat berbagi cerita, dan nggak pernah jaim sama kaka. Nggak kebayang sih kalau nggak ada ade, pasti bakal sepi banget.
+                    </div>
+                    <br />
+                    <div class="text-2xl text-start text-pink-500 _font-niconne">
+                        Semoga di umur baru ini, semua yang ade harapkan bisa pelan-pelan terwujud yaaa. Tetap jadi ade yang apa adanya, yang selalu seru diajak ngobrol, dan yang nggak pernah bosen dengerin curhatan kaka (maaf ya kalau kadang kebanyakan wkwkwk).
+                    </div>
+                    <br />
+                    <div class="text-xl text-start text-white _font-niconne text-right flex items-end justify-end">dari Romi</div>
+                </div>
+
+                <div id="img-3" class="bg-white absolute bottom-4 left-8 p-1 pb-5 -rotate-10 z-20 shadow-lg">
+                    <img src="/img/ade-3.jpeg" alt="" class="w-12 aspect-3/4 object-cover" />
+                </div>
+                <div id="img-1" class="bg-white absolute bottom-4 left-18 p-1 pb-5 -rotate-3 z-30 shadow-lg">
+                    <img src="/img/ade-1.png" alt="" class="w-18 aspect-3/4 object-cover" />
+                </div>
+                <div id="img-2" class="bg-white absolute bottom-4 left-34 p-1 pb-5 rotate-12 z-24 shadow-lg">
+                    <img src="/img/ade-2.jpeg" alt="" class="w-13 aspect-3/4 object-cover" />
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <!-- Swippe Up -->
+    <script>
+        let startY;
+        let isSwiped = false;
+
+        document.addEventListener("touchstart", (e) => {
+            startY = e.touches[0].clientY;
+        });
+
+        document.addEventListener("touchmove", (e) => {
+            let endY = e.touches[0].clientY;
+            if (!isSwiped && startY - endY > 50) {
+                isSwiped = true;
+                // Detect swipe up
+                gsap.to("#welcome-overlay", {
+                    y: "-100%",
+                    opacity: 0,
+                    duration: 2,
+                    ease: "power2.out",
+                });
+
+                gsap.fromTo(
+                    "#birthday-message > div",
+                    { opacity: 0, y: 30 }, // Start state
+                    { opacity: 1, y: 0, duration: 1, ease: "power2.out", stagger: 0.4 } // Animates one by one
+                );
+
+                gsap.fromTo("#img-ribbon", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0 });
+
+                const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+                tl.fromTo("#img-3", { opacity: 1, y: 10 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" })
+                    .fromTo("#img-2", { opacity: 1, y: 10 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, "-=0.5") // Overlapping
+                    .fromTo("#img-1", { opacity: 1, y: 10 }, { opacity: 1, y: 0, duration: 1, ease: "power2.out" }, "-=0.5"); // Overlapping
+            }
+        });
+    </script>
+
+    <!-- Handwrite name Ajeng -->
+    <script>
+        const text = "Ajeng";
+        const element = document.getElementById("handwriting-text");
+
+        element.innerHTML = text
+            .split("")
+            .map((letter) => `<span class="opacity-0">${letter}</span>`)
+            .join("");
+
+        gsap.to("#handwriting-text span", {
+            opacity: 1,
+            duration: 0.2,
+            stagger: 0.2,
+            ease: "power2.out",
+        });
+    </script>
+</html>
